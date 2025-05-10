@@ -25,8 +25,8 @@ Welcome to the **E-commerce Website** project – a complete **MERN stack** appl
 | Layer     | Technology                                  |
 |-----------|---------------------------------------------|
 | 💻 Frontend | React.js, React Router, Axios, CSS          |
-| 🔙 Backend  | Node.js, Express.js, Mongoose, Bcrypt, JWT |
-| 🗃️ Database | MongoDB (NoSQL)                            |
+| 🔙 Backend  | Node.js, Express.js, MySQL, Bcrypt, JWT |
+| 🗃️ Database | MySQL                            |
 
 ---
 # Sample Video
