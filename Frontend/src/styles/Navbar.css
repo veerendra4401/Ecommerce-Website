@@ -1,0 +1,121 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 100;
+}
+
+.brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.brand:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover, nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 60%;
+}
+
+nav span {
+  color: white;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.cart-count {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 0.25rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  .brand {
+    font-size: 1.2rem;
+  }
+  
+  nav a, nav button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

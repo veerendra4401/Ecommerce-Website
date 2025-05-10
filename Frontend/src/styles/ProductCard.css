@@ -1,0 +1,155 @@
+/* ProductCard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.product-card {
+  position: relative;
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  margin: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #4361ee;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
+}
+
+.product-card-content {
+  padding: 16px;
+}
+
+.product-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2b2d42;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-card-content p,
+.product-card-content span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2b2d42;
+}
+
+.product-card-actions {
+  display: flex;
+  padding: 0 16px 16px;
+  gap: 8px;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  background: #4361ee;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #3a56d4;
+  transform: translateY(-2px);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+.wishlist-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background: #e9ecef;
+  transform: scale(1.1);
+}
+
+.wishlist-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pulse animation for badge */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(67, 97, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(67, 97, 238, 0);
+  }
+}
+
+/* Discount price styling */
+.product-card-content div {
+  display: flex;
+  align-items: center;
+}
+
+.product-card-content span[style*="color: #f72585"] {
+  font-size: 1.2rem;
+}
+
+.product-card-content span[style*="text-decoration: line-through"] {
+  font-size: 0.9rem;
+  color: #adb5bd !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
